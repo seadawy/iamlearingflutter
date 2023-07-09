@@ -52,714 +52,22 @@ class Massenger extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Container(
-                      width: 100,
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          Text(
-                            "abdelrahamn osama seadawy ewew w",
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 100,
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          Text(
-                            "abdelrahamn osama seadawy ewew w",
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 100,
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          Text(
-                            "abdelrahamn osama seadawy ewew w",
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 100,
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          Text(
-                            "abdelrahamn osama seadawy ewew w",
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 100,
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          Text(
-                            "abdelrahamn osama seadawy ewew w",
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                    Container(
-                      width: 100,
-                      child: Column(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          Text(
-                            "abdelrahamn osama seadawy ewew w",
-                            maxLines: 1,
-                            overflow: TextOverflow.ellipsis,
-                          )
-                        ],
-                      ),
-                    ),
-                  ],
+              Container(
+                height: 80,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, index) => SListItem(),
+                  itemCount: 12,
                 ),
               ),
-              SizedBox(height: 20),
-              SingleChildScrollView(
-                scrollDirection: Axis.vertical,
-                child: Expanded(
-                  child: Column(
-                    children: [
-                      Row(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "abdelrahman osama seadawy",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        "msgdf",
-                                        maxLines: 2,
-                                      ),
-                                      Container(
-                                        width: 5,
-                                        height: 5,
-                                        color: Colors.blueAccent,
-                                        margin: EdgeInsetsDirectional.symmetric(
-                                          horizontal: 5,
-                                        ),
-                                      ),
-                                      Text(
-                                        "00:22 PM",
-                                        maxLines: 2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "abdelrahman osama seadawy",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        "msgdf",
-                                        maxLines: 2,
-                                      ),
-                                      Container(
-                                        width: 5,
-                                        height: 5,
-                                        color: Colors.blueAccent,
-                                        margin: EdgeInsetsDirectional.symmetric(
-                                          horizontal: 5,
-                                        ),
-                                      ),
-                                      Text(
-                                        "00:22 PM",
-                                        maxLines: 2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "abdelrahman osama seadawy",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        "msgdf",
-                                        maxLines: 2,
-                                      ),
-                                      Container(
-                                        width: 5,
-                                        height: 5,
-                                        color: Colors.blueAccent,
-                                        margin: EdgeInsetsDirectional.symmetric(
-                                          horizontal: 5,
-                                        ),
-                                      ),
-                                      Text(
-                                        "00:22 PM",
-                                        maxLines: 2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "abdelrahman osama seadawy",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        "msgdf",
-                                        maxLines: 2,
-                                      ),
-                                      Container(
-                                        width: 5,
-                                        height: 5,
-                                        color: Colors.blueAccent,
-                                        margin: EdgeInsetsDirectional.symmetric(
-                                          horizontal: 5,
-                                        ),
-                                      ),
-                                      Text(
-                                        "00:22 PM",
-                                        maxLines: 2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "abdelrahman osama seadawy",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        "msgdf",
-                                        maxLines: 2,
-                                      ),
-                                      Container(
-                                        width: 5,
-                                        height: 5,
-                                        color: Colors.blueAccent,
-                                        margin: EdgeInsetsDirectional.symmetric(
-                                          horizontal: 5,
-                                        ),
-                                      ),
-                                      Text(
-                                        "00:22 PM",
-                                        maxLines: 2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "abdelrahman osama seadawy",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        "msgdf",
-                                        maxLines: 2,
-                                      ),
-                                      Container(
-                                        width: 5,
-                                        height: 5,
-                                        color: Colors.blueAccent,
-                                        margin: EdgeInsetsDirectional.symmetric(
-                                          horizontal: 5,
-                                        ),
-                                      ),
-                                      Text(
-                                        "00:22 PM",
-                                        maxLines: 2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "abdelrahman osama seadawy",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        "msgdf",
-                                        maxLines: 2,
-                                      ),
-                                      Container(
-                                        width: 5,
-                                        height: 5,
-                                        color: Colors.blueAccent,
-                                        margin: EdgeInsetsDirectional.symmetric(
-                                          horizontal: 5,
-                                        ),
-                                      ),
-                                      Text(
-                                        "00:22 PM",
-                                        maxLines: 2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                      Row(
-                        children: [
-                          Stack(
-                            children: [
-                              CircleAvatar(
-                                radius: 30,
-                                backgroundImage:
-                                    NetworkImage("https://cataas.com/cat/cute"),
-                              ),
-                              CircleAvatar(
-                                radius: 8.2,
-                                backgroundColor: Colors.white,
-                              ),
-                              CircleAvatar(
-                                radius: 7.6,
-                                backgroundColor: Colors.green,
-                              ),
-                            ],
-                            alignment: AlignmentDirectional.bottomEnd,
-                          ),
-                          SizedBox(
-                            width: 15,
-                          ),
-                          Expanded(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: [
-                                Text(
-                                  "abdelrahman osama seadawy",
-                                  textAlign: TextAlign.start,
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18),
-                                ),
-                                Container(
-                                  child: Row(
-                                    children: [
-                                      Text(
-                                        "msgdf",
-                                        maxLines: 2,
-                                      ),
-                                      Container(
-                                        width: 5,
-                                        height: 5,
-                                        color: Colors.blueAccent,
-                                        margin: EdgeInsetsDirectional.symmetric(
-                                          horizontal: 5,
-                                        ),
-                                      ),
-                                      Text(
-                                        "00:22 PM",
-                                        maxLines: 2,
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ],
-                            ),
-                          )
-                        ],
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                    ],
-                  ),
+              ListView.separated(
+                physics: NeverScrollableScrollPhysics(),
+                separatorBuilder: (context, index) => SizedBox(
+                  height: 10,
                 ),
+                shrinkWrap: true,
+                itemBuilder: (context, index) => MListItem(),
+                itemCount: 10,
               ),
             ],
           ),
@@ -767,4 +75,65 @@ class Massenger extends StatelessWidget {
       ),
     );
   }
+
+  Widget SListItem() => Container(
+      width: 100,
+      child: Column(children: [
+        Stack(
+          children: [
+            CircleAvatar(
+              radius: 30,
+              backgroundImage: NetworkImage("https://cataas.com/cat/cute"),
+            ),
+            CircleAvatar(
+              radius: 8.2,
+              backgroundColor: Colors.white,
+            ),
+            CircleAvatar(
+              radius: 7.6,
+              backgroundColor: Colors.green,
+            ),
+          ],
+          alignment: AlignmentDirectional.bottomEnd,
+        ),
+        Text(
+          "abdelrahamn osama seadawy ewew w",
+          maxLines: 1,
+          overflow: TextOverflow.ellipsis,
+        )
+      ]));
+
+  Widget MListItem() => Row(
+        children: [
+          Stack(
+            children: [
+              CircleAvatar(
+                radius: 30,
+                backgroundImage: NetworkImage("https://cataas.com/cat/cute"),
+              ),
+              CircleAvatar(
+                radius: 8.2,
+                backgroundColor: Colors.white,
+              ),
+              CircleAvatar(
+                radius: 7.6,
+                backgroundColor: Colors.green,
+              ),
+            ],
+            alignment: AlignmentDirectional.bottomEnd,
+          ),
+          Column(
+            children: [
+              Text(
+                "abdelrahamn osama seadawy ewew w",
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: TextStyle(fontSize: 18, fontWeight: FontWeight.w900),
+                textAlign: TextAlign.center,
+              ),
+              Text("masseage")
+            ],
+          )
+        ],
+      );
 }
