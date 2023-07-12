@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'massenger.dart';
-
 class BMI extends StatefulWidget {
   const BMI({super.key});
 
@@ -284,12 +282,129 @@ class _BMIState extends State<BMI> {
             height: 50,
             color: Colors.amber,
             onPressed: () {
-              Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => Massenger()));
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => BMIResult(
+                          isMale, userHight.round(), w.round(), a.round())));
             },
             child: Text("Calculate"),
           )
         ],
+      ),
+    );
+  }
+}
+
+class BMIResult extends StatelessWidget {
+  late bool isMale;
+  late int height;
+  late int width;
+  late int age;
+
+  BMIResult(bool G, int H, int W, int A, {super.key}) {
+    isMale = G;
+    height = H;
+    width = W;
+    age = A;
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text("Result"),
+      ),
+      body: Padding(
+        padding: const EdgeInsets.all(20.0),
+        child: Container(
+          width: double.infinity,
+          padding: EdgeInsetsDirectional.all(20),
+          decoration: BoxDecoration(
+            color: Colors.black38,
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                alignment: Alignment.center,
+                width: 300,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  "Grend: ${isMale ? 'Male' : 'Female'}",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                alignment: Alignment.center,
+                width: 300,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  "Height: $height",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                alignment: Alignment.center,
+                width: 300,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Text(
+                  "Width: $width",
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 40,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ),
+              SizedBox(height: 20),
+              Container(
+                width: 300,
+                height: 60,
+                decoration: BoxDecoration(
+                  color: Colors.black45,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Padding(
+                  padding: const EdgeInsetsDirectional.only(
+                    start: 56
+                  ),
+                  child: Text(
+                    "Age: $age",
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 40,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
       ),
     );
   }
