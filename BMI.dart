@@ -336,7 +336,7 @@ class BMIResult extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
-                  "Grend: ${isMale ? 'Male' : 'Female'}",
+                  "Grend => ${isMale ? 'Male' : 'Female'}",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40,
@@ -354,7 +354,7 @@ class BMIResult extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
-                  "Height: $height",
+                  "Height => $height",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40,
@@ -372,7 +372,7 @@ class BMIResult extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Text(
-                  "Width: $width",
+                  "Width => $width",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 40,
@@ -389,11 +389,9 @@ class BMIResult extends StatelessWidget {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: Padding(
-                  padding: const EdgeInsetsDirectional.only(
-                    start: 56
-                  ),
+                  padding: const EdgeInsetsDirectional.only(top: 5, start: 52),
                   child: Text(
-                    "Age: $age",
+                    "Age => $age",
                     style: TextStyle(
                       color: Colors.white,
                       fontSize: 40,

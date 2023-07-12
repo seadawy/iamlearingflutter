@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:app1/BMI.dart';
+import 'package:app1/login.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: BMI(),
+      home: Login(),
     );
   }
 }
