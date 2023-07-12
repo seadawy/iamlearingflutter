@@ -8,6 +8,10 @@ class BMI extends StatefulWidget {
 }
 
 class _BMIState extends State<BMI> {
+  bool isMale = true;
+  double userHight = 134;
+  double w = 333;
+  double a = 32;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,28 +28,36 @@ class _BMIState extends State<BMI> {
               child: Row(
                 children: [
                   Expanded(
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.male,
-                            size: 100,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            "MALE",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          isMale = true;
+                        });
+                      },
+                      child: Container(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.male,
+                              size: 100,
                               color: Colors.white,
                             ),
-                          ),
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.blueGrey,
-                        borderRadius: BorderRadius.circular(12),
+                            Text(
+                              "MALE",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            ),
+                          ],
+                        ),
+                        decoration: BoxDecoration(
+                          color:
+                              isMale ? Colors.cyanAccent[700] : Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
                     ),
                   ),
@@ -53,28 +65,37 @@ class _BMIState extends State<BMI> {
                     width: 20,
                   ),
                   Expanded(
-                    child: Container(
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.female,
-                            size: 100,
-                            color: Colors.white,
-                          ),
-                          Text(
-                            "FEMALE",
-                            style: TextStyle(
-                              fontSize: 18,
-                              fontWeight: FontWeight.w700,
+                    child: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          isMale = false;
+                        });
+                      },
+                      child: Container(
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Icon(
+                              Icons.female,
+                              size: 100,
                               color: Colors.white,
                             ),
-                          )
-                        ],
-                      ),
-                      decoration: BoxDecoration(
-                        color: Colors.blueGrey,
-                        borderRadius: BorderRadius.circular(12),
+                            Text(
+                              "FEMALE",
+                              style: TextStyle(
+                                fontSize: 18,
+                                fontWeight: FontWeight.w700,
+                                color: Colors.white,
+                              ),
+                            )
+                          ],
+                        ),
+                        decoration: BoxDecoration(
+                          color: !isMale
+                              ? Colors.cyanAccent[700]
+                              : Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                       ),
                     ),
                   ),
@@ -104,7 +125,7 @@ class _BMIState extends State<BMI> {
                     textBaseline: TextBaseline.alphabetic,
                     children: [
                       Text(
-                        "132",
+                        "${userHight.round()}",
                         style: TextStyle(color: Colors.white, fontSize: 50),
                       ),
                       Text(
@@ -114,11 +135,13 @@ class _BMIState extends State<BMI> {
                     ],
                   ),
                   Slider(
-                      value: 43,
-                      max: 300,
-                      min: 30,
+                      value: userHight,
+                      max: 300.0,
+                      min: 80.0,
                       onChanged: (value) {
-                        print(value);
+                        setState(() {
+                          userHight = value;
+                        });
                       })
                 ]),
               ),
@@ -150,9 +173,9 @@ class _BMIState extends State<BMI> {
                             textBaseline: TextBaseline.alphabetic,
                             children: [
                               Text(
-                                "3223",
+                                "${w.round()}",
                                 style: TextStyle(
-                                    fontSize: 30, fontWeight: FontWeight.w800),
+                                    fontSize: 40, fontWeight: FontWeight.w800),
                               ),
                               Text("kg"),
                             ],
@@ -161,18 +184,28 @@ class _BMIState extends State<BMI> {
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FloatingActionButton(
-                                onPressed: () {},
-                                child: Text("-"),
+                                onPressed: () {
+                                  setState(() {
+                                    w--;
+                                  });
+                                },
+                                child: Icon(Icons.remove),
+                                mini: true,
                               ),
                               SizedBox(
                                 width: 10,
                               ),
                               FloatingActionButton(
-                                onPressed: () {},
-                                child: Text("+"),
+                                onPressed: () {
+                                  setState(() {
+                                    w++;
+                                  });
+                                },
+                                child: Icon(Icons.add),
+                                mini: true,
                               ),
                             ],
-                          )
+                          ),
                         ],
                       ),
                     ),
@@ -192,29 +225,43 @@ class _BMIState extends State<BMI> {
                           Text(
                             "AGE",
                             style: TextStyle(
-                                fontSize: 15, fontWeight: FontWeight.w800),
+                              fontSize: 15,
+                              fontWeight: FontWeight.w800,
+                            ),
                           ),
                           Text(
-                            "3223",
+                            "${a.round()}",
                             style: TextStyle(
-                                fontSize: 30, fontWeight: FontWeight.w800),
+                              fontSize: 40,
+                              fontWeight: FontWeight.w800,
+                            ),
                           ),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: [
                               FloatingActionButton(
-                                onPressed: () {},
-                                child: Text("-"),
+                                onPressed: () {
+                                  setState(() {
+                                    a--;
+                                  });
+                                },
+                                child: Icon(Icons.remove),
+                                mini: true,
                               ),
                               SizedBox(
                                 width: 10,
                               ),
                               FloatingActionButton(
-                                onPressed: () {},
-                                child: Text("+"),
+                                onPressed: () {
+                                  setState(() {
+                                    a++;
+                                  });
+                                },
+                                child: Icon(Icons.add),
+                                mini: true,
                               ),
                             ],
-                          )
+                          ),
                         ],
                       ),
                     ),
