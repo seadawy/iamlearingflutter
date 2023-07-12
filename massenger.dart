@@ -7,7 +7,6 @@ class Massenger extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        leading: Icon(Icons.data_usage_rounded),
         title: Text("Massenger"),
         actions: [
           CircleAvatar(
