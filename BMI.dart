@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'massenger.dart';
+
 class BMI extends StatefulWidget {
   const BMI({super.key});
 
@@ -12,6 +14,7 @@ class _BMIState extends State<BMI> {
   double userHight = 134;
   double w = 333;
   double a = 32;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -35,9 +38,14 @@ class _BMIState extends State<BMI> {
                         });
                       },
                       child: Container(
+                        decoration: BoxDecoration(
+                          color:
+                              isMale ? Colors.cyanAccent[700] : Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Icon(
                               Icons.male,
                               size: 100,
@@ -53,11 +61,6 @@ class _BMIState extends State<BMI> {
                             ),
                           ],
                         ),
-                        decoration: BoxDecoration(
-                          color:
-                              isMale ? Colors.cyanAccent[700] : Colors.blueGrey,
-                          borderRadius: BorderRadius.circular(12),
-                        ),
                       ),
                     ),
                   ),
@@ -72,9 +75,15 @@ class _BMIState extends State<BMI> {
                         });
                       },
                       child: Container(
+                        decoration: BoxDecoration(
+                          color: !isMale
+                              ? Colors.cyanAccent[700]
+                              : Colors.blueGrey,
+                          borderRadius: BorderRadius.circular(12),
+                        ),
                         child: Column(
                           mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
+                          children: const [
                             Icon(
                               Icons.female,
                               size: 100,
@@ -89,12 +98,6 @@ class _BMIState extends State<BMI> {
                               ),
                             )
                           ],
-                        ),
-                        decoration: BoxDecoration(
-                          color: !isMale
-                              ? Colors.cyanAccent[700]
-                              : Colors.blueGrey,
-                          borderRadius: BorderRadius.circular(12),
                         ),
                       ),
                     ),
@@ -189,20 +192,24 @@ class _BMIState extends State<BMI> {
                                     w--;
                                   });
                                 },
-                                child: Icon(Icons.remove),
+                                heroTag: 'w-',
                                 mini: true,
+                                child: Icon(Icons.remove),
                               ),
                               SizedBox(
                                 width: 10,
                               ),
                               FloatingActionButton(
                                 onPressed: () {
-                                  setState(() {
-                                    w++;
-                                  });
+                                  setState(
+                                    () {
+                                      w++;
+                                    },
+                                  );
                                 },
-                                child: Icon(Icons.add),
+                                heroTag: 'w+',
                                 mini: true,
+                                child: Icon(Icons.add),
                               ),
                             ],
                           ),
@@ -245,8 +252,9 @@ class _BMIState extends State<BMI> {
                                     a--;
                                   });
                                 },
-                                child: Icon(Icons.remove),
+                                heroTag: 'a-',
                                 mini: true,
+                                child: Icon(Icons.remove),
                               ),
                               SizedBox(
                                 width: 10,
@@ -257,8 +265,9 @@ class _BMIState extends State<BMI> {
                                     a++;
                                   });
                                 },
-                                child: Icon(Icons.add),
+                                heroTag: 'a+',
                                 mini: true,
+                                child: Icon(Icons.add),
                               ),
                             ],
                           ),
@@ -274,7 +283,10 @@ class _BMIState extends State<BMI> {
             minWidth: double.infinity,
             height: 50,
             color: Colors.amber,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => Massenger()));
+            },
             child: Text("Calculate"),
           )
         ],

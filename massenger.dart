@@ -11,23 +11,23 @@ class Massenger extends StatelessWidget {
         title: Text("Massenger"),
         actions: [
           CircleAvatar(
-            child: Icon(
+            backgroundColor: Colors.amber[100],
+            child: const Icon(
               Icons.camera_alt,
               color: Colors.white,
               size: 20,
             ),
-            backgroundColor: Colors.amber[100],
           ),
           SizedBox(
             width: 10,
           ),
           CircleAvatar(
+            backgroundColor: Colors.amber[100],
             child: Icon(
               Icons.edit,
               color: Colors.white,
               size: 20,
             ),
-            backgroundColor: Colors.amber[100],
           ),
         ],
       ),
